@@ -13,14 +13,15 @@ function playSound(arraybuffer) {
 function handleFileSelect(ind) {
     var audio_input = document.getElementById("sound-"+ String(ind));
     var files = audio_input.files; // FileList object
-    playFile(files[0]);
+    if (audio_input.files.length != 0){
+      playFile(files[0]);
+    }
 }
 
 function playFile(file) {
     var freader = new FileReader();
 
     freader.onload = function (e) {
-        console.log(e.target.result);
         playSound(e.target.result);
     };
     freader.readAsArrayBuffer(file);
@@ -28,7 +29,6 @@ function playFile(file) {
 
 function updateStep(y,x){
   target = document.getElementById("y" + String(y) + "x" + String(x));
-  console.log(target);
   target.classList.toggle("active");
 }
 
