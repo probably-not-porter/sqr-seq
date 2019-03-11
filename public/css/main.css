@@ -63,9 +63,7 @@ body{
 
 }
 .shadow {
-  -moz-box-shadow:    inset 0 0 10px white;
-   -webkit-box-shadow: inset 0 0 10px white;
-   box-shadow:         inset 0 0 10px white;
+  border: 5px solid white;
 }
 .block:hover{
   background-color: #333;
@@ -75,13 +73,17 @@ body{
   color: white;
 }
 #instrument-text{
-  position:absolute;
-  text-align: center;
-  margin-left: -100px;
+  float: left;
+  width: 100%;
+  height: 100%;
+
 }
 #play_pause{
   margin-top: 10px;
   margin-left: 10px;
   width: 100px;
   height: 100px;
+}
+.inputfile{
+  float:left;
 }
