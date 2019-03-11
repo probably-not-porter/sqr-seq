@@ -33,6 +33,8 @@ function updateStep(y,x){
 }
 
 
+// PLAY FUNCTIONALITY
+
 var play_pause = false;
 var step_num = 0;
 var current_elems = [];
@@ -64,7 +66,9 @@ function play(){
     var container = document.getElementById("container-" + String(x));
     container.getElementsByTagName('div')[step_num+1].classList.add("shadow");
     current_elems.push(container.getElementsByTagName('div')[step_num+1]);
-    console.log(current_elems);
+    if(container.getElementsByTagName('div')[step_num+1].classList.contains("active")){
+      handleFileSelect(x);
+    }
   }
   step_num = step_num + 1;
   if (step_num > 15){

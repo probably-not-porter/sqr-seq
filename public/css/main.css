@@ -46,7 +46,8 @@ body{
   display: inline-block;
 }
 .block.active{
-  background-color: whitesmoke;
+  transition-duration: 200ms;
+  background-color: gray;
 }
 .block.header{
   font-size: 12px;
