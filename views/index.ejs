@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+    </head>
+    <body>
+      <div id="controls-area">
+      </div>
+      <div id="seq-area">
+        <%for (var y = 0; y < 20; y++){%>
+          <div class="block-container">
+            <div class="block header y<%=y%>">
+              <span id='instrument-text'> TRACK <%=y%> </span>
+            </div><%for (var x = 0; x < 16; x++){%><div class="block y<%=y%> x<%=x%>"></div><%}%>
+          </div>
+        <%}%>
+      </div>
+    </body>
+</html>

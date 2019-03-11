@@ -1,17 +1,29 @@
 {
-  "name": "application-name",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "nodejs ./bin/www"
+  "name": "sqr-seq",
+  "version": "1.0.0",
+  "description": "",
+  "engines":{
+    "node": "6.11.0"
   },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "midi",
+    "sequencer"
+  ],
+  "author": "phi-nguyen",
+  "license": "ISC",
   "dependencies": {
-    "express": "~4.0.0",
-    "static-favicon": "~1.0.0",
-    "morgan": "~1.0.0",
-    "cookie-parser": "~1.0.1",
-    "body-parser": "~1.0.0",
-    "debug": "~0.7.4",
-    "jade": "~1.3.0"
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "install": "^0.12.2",
+    "nodemon": "^1.18.9",
+    "npm": "^6.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.13.0"
   }
 }

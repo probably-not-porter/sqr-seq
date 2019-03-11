@@ -1,0 +1,76 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+body{
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+#controls-area{
+  display:inline-block;
+  position:relative;
+  margin: 0;
+  width: 19%;
+  height: 100%;
+  background-color: white;
+  box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  border: 1px solid #777;
+}
+#seq-area{
+  display:inline-block;
+  position:relative;
+  margin: 0;
+  width: 80%;
+  height: 100%;
+}
+.block-container{
+  position:relative;
+  display: block;
+  width: 100%;
+  min-height: 20px;
+  height: 5%;
+}
+.block{
+  transition-delay: 100ms;
+  transition-duration: 500ms;
+  position:relative;
+  width: 5%;
+  min-height: 10px;
+  height: 100%;
+  background-color: black;
+
+  box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  border: 1px solid #777;
+
+  display: inline-block;
+}
+.block.header{
+  width: 20%;
+  color: white;
+  text-align: center;
+
+}
+.block:hover{
+  transition-delay: 0s;
+  transition-duration: 300ms;
+  background-color: #333;
+}
+.p{
+  font-size: 10px;
+  color: white;
+}
+#instrument-text{
+  margin-top: 5%;
+  position:absolute;
+  margin-left: -30px;
+}
