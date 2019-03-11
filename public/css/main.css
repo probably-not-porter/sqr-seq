@@ -1,6 +1,9 @@
 *{
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 html {
     height: 100%;
@@ -42,6 +45,7 @@ body{
   min-height: 10px;
   height: 100%;
   background-color: black;
+  border: 1px solid gray;
 
   display: inline-block;
 }
@@ -55,6 +59,7 @@ body{
   color: white;
   text-align: center;
   background-color: #111;
+  border: 1px solid black;
 
 }
 .shadow {

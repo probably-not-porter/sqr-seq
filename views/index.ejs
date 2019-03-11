@@ -23,7 +23,9 @@
 
       <div id="controls-area">
         <input id="play_pause" onclick="playPause()" type="button" value="play/pause">
-        <span>Tempo</span>
+        <br><br>
+        <span>Milliseconds per step (</span><span id="ms_val">300</span><span>)</span><br>
+        <input type="range" min="100" max="500" value="300" oninput="updateTempo(this.value)" onchange="updateTempo(this.value)">
       </div>
     </body>
 </html>
