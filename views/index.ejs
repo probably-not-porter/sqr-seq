@@ -4,16 +4,21 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script type="text/javascript" src="js/main.js"></script>
     </head>
     <body>
       <div id="controls-area">
       </div>
       <div id="seq-area">
-        <%for (var y = 0; y < 20; y++){%>
+        <%for (var y = 0; y < 10; y++){%>
           <div class="block-container">
-            <div class="block header y<%=y%>">
-              <span id='instrument-text'> TRACK <%=y%> </span>
-            </div><%for (var x = 0; x < 16; x++){%><div class="block y<%=y%> x<%=x%>"></div><%}%>
+            <div class="block header y<%=y%>" onclick="handleFileSelect(<%=y%>)">
+              <span id="instrument-text">
+                <label>Track <%=y + 1%></label>
+                <input id="sound-<%=y%>"type="file" accept="audio/*">
+              </span>
+            </div><%for (var x = 0; x < 16; x++){%>
+              <div onclick="updateStep(<%=y%>,<%=x%>),handleFileSelect(<%=y%>)" class="block" id="y<%=y%>x<%=x%>"></div><%}%>
           </div>
         <%}%>
       </div>
