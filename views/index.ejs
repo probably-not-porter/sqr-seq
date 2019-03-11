@@ -7,11 +7,9 @@
         <script type="text/javascript" src="js/main.js"></script>
     </head>
     <body>
-      <div id="controls-area">
-      </div>
       <div id="seq-area">
         <%for (var y = 0; y < 10; y++){%>
-          <div class="block-container">
+          <div id="container-<%=y%>" class="block-container">
             <div class="block header y<%=y%>" onclick="handleFileSelect(<%=y%>)">
               <span id="instrument-text">
                 <label>Track <%=y + 1%></label>
@@ -21,6 +19,11 @@
               <div onclick="updateStep(<%=y%>,<%=x%>),handleFileSelect(<%=y%>)" class="block" id="y<%=y%>x<%=x%>"></div><%}%>
           </div>
         <%}%>
+      </div>
+
+      <div id="controls-area">
+        <input id="play_pause" onclick="playPause()" type="button" value="play/pause">
+        <span>Tempo</span>
       </div>
     </body>
 </html>

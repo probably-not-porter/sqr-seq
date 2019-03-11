@@ -31,3 +31,43 @@ function updateStep(y,x){
   console.log(target);
   target.classList.toggle("active");
 }
+
+
+var play_pause = false;
+var step_num = 0;
+var current_elems = [];
+var intervalId;
+
+function playPause(){
+  if (play_pause == false){
+    intervalId = setInterval(play, 100);
+    play_pause = true;
+  }
+  else{
+    clearInterval(intervalId);
+    for (var n = 0; n < current_elems.length; n++){
+      current_elems[n].classList.remove("shadow");
+    }
+    current_elems = [];
+    step_num = 0;
+    play_pause = false;
+  }
+}
+
+function play(){
+
+  for (var n = 0; n < current_elems.length; n++){
+    current_elems[n].classList.remove("shadow");
+  }
+  current_elems = [];
+  for(var x = 0; x < 10; x++){
+    var container = document.getElementById("container-" + String(x));
+    container.getElementsByTagName('div')[step_num+1].classList.add("shadow");
+    current_elems.push(container.getElementsByTagName('div')[step_num+1]);
+    console.log(current_elems);
+  }
+  step_num = step_num + 1;
+  if (step_num > 15){
+    step_num = 0;
+  }
+}

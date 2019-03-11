@@ -16,20 +16,17 @@ body{
   display:inline-block;
   position:relative;
   margin: 0;
-  width: 19%;
+  width: 100%;
   height: 100%;
   background-color: white;
-  box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-  border: 1px solid #777;
+  background-color: gray;
 }
 #seq-area{
   display:inline-block;
   position:relative;
   margin: 0;
-  width: 80%;
-  height: 100%;
+  width: 100%;
+  height: 70%;
 }
 .block-container{
   position:relative;
@@ -37,37 +34,34 @@ body{
   width: 100%;
   min-height: 20px;
   height: 10%;
+  font-size: 0;
 }
 .block{
-  transition-delay: 100ms;
-  transition-duration: 500ms;
   position:relative;
   width: 5%;
   min-height: 10px;
   height: 100%;
   background-color: black;
 
-  box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-  border: 1px solid #777;
-
   display: inline-block;
 }
 .block.active{
-  transition-delay: 0ms;
-  transition-delay: 0ms;
-  background-color: red;
+  background-color: whitesmoke;
 }
 .block.header{
+  font-size: 12px;
   width: 20%;
   color: white;
   text-align: center;
+  background-color: #111;
 
 }
+.shadow {
+  -moz-box-shadow:    inset 0 0 10px white;
+   -webkit-box-shadow: inset 0 0 10px white;
+   box-shadow:         inset 0 0 10px white;
+}
 .block:hover{
-  transition-delay: 0s;
-  transition-duration: 300ms;
   background-color: #333;
 }
 .p{
@@ -78,4 +72,10 @@ body{
   position:absolute;
   text-align: center;
   margin-left: -100px;
+}
+#play_pause{
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 100px;
+  height: 100px;
 }
